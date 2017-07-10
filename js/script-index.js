@@ -1,14 +1,19 @@
-$(document).ready( function(){
+$(document).ready(function(){
 
 	//Ocultar flecha
 	$('.js-back').hide();
+
+    //se llama a la funcion que ingresa el nuevo texto
+	printNews();
 
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 
 });
-
-
+//Funcion que toma al parrafo contenido en un div con class=callout-news y le ingresa un texto
+function printNews(){
+	$('.callout-news p').text("NUEVA RECETA");
+	}
 /*
 * Función que se encarga de pintar TODAS las recetas que tengan 
 * marcado el atributo "highlighted" como TRUE
