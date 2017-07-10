@@ -64,6 +64,7 @@ function renderRecipe(recipe) {
     enlace.append(imagen);
    }
    $('.list-recipes').append(enlace);
+    renderActivities(activitiesArray);
 }
 
 
@@ -73,6 +74,12 @@ function renderRecipe(recipe) {
 */
 function renderActivities(activitiesArray) {
 	console.log('Activities: ', activitiesArray);
+    for (acti in activitiesArray){
+    	renderActivity(acti);
+    	if(acti > 0){
+    		$('.wrapper-message').hide();
+    	}
+    }	
 }
 
 /*
