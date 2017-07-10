@@ -1,4 +1,3 @@
-
 var recipesArray = [
   
   {
@@ -7,7 +6,7 @@ var recipesArray = [
     "excerpt": "When I’ve got too many cheese bits on hand, it's now fromage fort to the rescue",
     "source": {
       "name": "David Lebovitz",
-      "url": "img/recipes/320x350/spring-fromage-fort.jpg"
+      "url": "http://www.davidlebovitz.com/2014/04/fromage-forte-cheese-dip-spread-recipe/"
     },
     "cookTime": "15 min",
     "ingredients": [
@@ -153,7 +152,7 @@ var recipesArray = [
     "excerpt": "It is a thing of beauty, shaped into a large oval loaf and glazed with tangy cocktail sauce",
     "source": {
       "name": "Food52",
-      "url": "img/recipes/320x350/spring-meatloaf.jpg"
+      "url": "http://food52.com/recipes/24302-fatted-calf-s-meatloaf"
     },
     "cookTime": "1 hr 30 min",
     "ingredients": [
@@ -313,7 +312,7 @@ var recipesArray = [
     "excerpt": "Juicy, fragrant, perfectly textured for a little fire action",
     "source": {
       "name": "Tartelette",
-      "url": "img/recipes/320x350/summer-apricots-honey-panna-cotta.jpg"
+      "url": "http://www.tarteletteblog.com/2011/07/recipe-gluten-free-apricots-honey-panna.html"
     },
     "cookTime": "35 min",
     "ingredients": [
@@ -422,7 +421,7 @@ var recipesArray = [
     "excerpt": "Making homemade pasta may seem arduous, but this dish is worth the extra work",
     "source": {
       "name": "Martha Stewart",
-      "url": "img/recipes/320x350/fall-roasted-butternut-squash-lasagna.jpg"
+      "url": "http://www.marthastewart.com/857657/roasted-butternut-squash-lasagna"
     },
     "cookTime": "1 hr 35 min",
     "ingredients": [
@@ -572,7 +571,7 @@ var recipesArray = [
     "excerpt": "A good braise always trumps a steak or a roast, both in terms of complex flavors and satisfaction",
     "source": {
       "name": "NY Times",
-      "url": "img/recipes/320x350/winter-braised-duck.jpg"
+      "url": "http://www.nytimes.com/recipes/1014424/italian-red-wine-braised-duck-with-olive-gremolata.html"
     },
     "cookTime": "2 hr 30 min",
     "ingredients": [
@@ -709,7 +708,7 @@ var recipesArray = [
     "excerpt": "A good chocolate tart doesn’t need to be fancy, but it needs to be deep, dark, and yes, somewhat decadent.",
     "source": {
       "name": "David Lebovitz",
-      "url": "img/recipes/320x350/winter-chocolate-tart.jpg"
+      "url": "http://www.davidlebovitz.com/2011/10/chocolate-tart-recipe/"
     },
     "cookTime": "1 hr",
     "ingredients": [

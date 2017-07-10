@@ -41,7 +41,7 @@ function renderRecipe(recipe) {
     	console.log(recipe["title"]);
     	var autor = recipe["source"].name;
     	console.log(recipe["source"].name);
-    	var url = recipe["source"].url;
+    	var name = recipe["name"];
     
     
 	var enlace = $('<a/>', {'class': 'item-recipe'});
@@ -51,7 +51,7 @@ function renderRecipe(recipe) {
 	var hijo2span1= $('<span/>',{'class': 'author-recipe'});
 	var hijo2span2= $('<span/>',{'class': 'bookmarks-recipe'});
     var hijo2span21= $('<span/>',{'class': 'icon-bookmark'});
-    var imagen = $('<img/>',{'src': url});
+    var imagen = $('<img/>',{'src':'img/recipes/320x350/' + name + '.jpg'});
 
     hijo2span2.append(hijo2span21);
     hijo2.append(hijo2span2);
@@ -75,7 +75,7 @@ function renderRecipe(recipe) {
 function renderActivities(activitiesArray) {
 	console.log('Activities: ', activitiesArray);
    
-    }	
+   
 }
 
 /*
