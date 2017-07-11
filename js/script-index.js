@@ -9,6 +9,9 @@ $(document).ready(function(){
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 
+	//llamada a la funcion  que imprimira el contenido de activitiesArrayS
+	 renderActivities(activitiesArray);
+
 });
 //Funcion que toma al parrafo contenido en un div con class=callout-news y le ingresa un texto
 function printNews(){
@@ -35,8 +38,6 @@ function renderHighlightedRecipes(recipesArray) {
 * archivo "templates/templates-recipe.html"
 */
 function renderRecipe(recipe) {
-	console.log('Voy a pintar la receta: ', recipe);
-    for(var e in recipe){
     	var titulo = recipe["title"];
     	console.log(recipe["title"]);
     	var autor = recipe["source"].name;
@@ -62,9 +63,8 @@ function renderRecipe(recipe) {
     span.append(hijo2);
     enlace.append(span);
     enlace.append(imagen);
-   }
+   
    $('.list-recipes').append(enlace);
-    renderActivities(activitiesArray);
 }
 
 
@@ -74,9 +74,14 @@ function renderRecipe(recipe) {
 */
 function renderActivities(activitiesArray) {
 	console.log('Activities: ', activitiesArray);
-   
-   
-}
+   activitiesArray.forEach(function(acti){
+   	    renderActivity(acti);
+   })
+
+   if(activitiesArray.lenght > 0){
+		$('.wrapper-message').hide();
+	}
+} 
 
 /*
 * Función que se encarga de pintar una actividad
@@ -84,7 +89,39 @@ function renderActivities(activitiesArray) {
 * archivo "templates/templates-activity.html"
 */
 function renderActivity(recipe) {
-	
-}
+     var avatar = recipe.userAvatar;
+     var nombreAutor =recipe.userName;
+     var receta =recipe.recipeName;
+     var localizacion =recipe.place;
+     var img = recipe.image;
+    
+
+	var enlace = $('<a/>', {'class': 'item-activity'});
+	var span = $('<span/>', {'class': 'attribution'});
+	var hijo1 = $('<span/>',{'class':'avatar'});
+	var imagen = $('<img/>',{'src': avatar, 'class':'image-avatar'});
+	var hijo2 = $('<span/>', {'class': 'meta'});
+	var hijo2span1 = $('<span/>', {'class': 'author'});
+	var hijo2span2 = $('<span/>', {'class': 'recipe', text : recipe["text"]});
+	var hijo2span3 = $('<span/>', {'class': 'location'});
+	var div = $('<div/>', {'class': 'bg-image', 'background-image': 'url(' + img + ')'});
+    
+    
+    hijo2span1.append(nombreAutor);
+    hijo2span2.append(receta);
+    hijo2span3.append(localizacion)
+	hijo2.append(hijo2span1);
+	hijo2.append(hijo2span2);
+	hijo2.append(hijo2span3);
+	hijo1.append(imagen);
+	span.append(hijo2);
+	span.append(hijo1);
+	enlace.append(span);
+	enlace.append(div);
+  
+
+    $('.list-activities').append(enlace);
+
+} 
 
 
